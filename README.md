@@ -23,7 +23,6 @@ Here's a walkthrough of the implemented features:
 
 <img src='flashcards.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](https://www.cockos.com/licecap/).
 
 ## Notes
 
