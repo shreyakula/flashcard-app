@@ -1,16 +1,46 @@
-# React + Vite
+# Flashcard Study App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Submitted by: **Shreya Akula**
 
-Currently, two official plugins are available:
+This app is a flashcard study tool built around core computer science concepts. Users can flip through cards one at a time, reveal answers, and navigate to a random next card. The design features a soft gradient background with frosted glass cards and Lora serif typography.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Time spent: **3 hours**
 
-## React Compiler
+## Required Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The following **required** functionality is completed:
 
-## Expanding the ESLint configuration
+- [x] The title of the card set, a short description, and the total number of cards are displayed
+- [x] A single card is displayed at a time
+- [x] Only one half of the information pair is shown at a time (question or answer)
+- [x] Clicking on a card flips it over and reveals the answer
+- [x] Clicking on a flipped card flips it back to show the question
+- [x] Clicking the Next button displays a new card selected at random (never the same card twice in a row)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Video Walkthrough
+
+Here's a walkthrough of the implemented features:
+
+<img src='flashcards.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](https://www.cockos.com/licecap/).
+
+## Notes
+
+The main challenge was managing the flip state across components — specifically making sure the flip resets to false when a new card loads. I solved this by using a `key` prop on the Flashcard component so React remounts it fresh on every "Next card" click, which resets the internal `useState` automatically.
+
+## License
+
+Copyright 2026 Shreya Akula
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
